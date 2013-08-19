@@ -37,6 +37,9 @@ def makeSymlinks(names):
         os.path.exists(dir) or os.mkdir(dir)
         os.symlink(os.path.join(root, name[1]), name[0])
         names.remove(name)
+  if len(names) > 0:
+    print >>sys.stderr, 'Could not find the following dependencies:'
+    print >>sys.stderr, ', '.join([name[1] for name in names])
 
 if len(sys.argv) < 2:
   print "usage: " + sys.argv[0] + " [-r] jar-file"
