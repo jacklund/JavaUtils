@@ -8,13 +8,13 @@ Utilities to help with Java development and deployment
 Python class to parse Java jar files
 
 #### Methods
-##### Jar(_jarfile_)
+##### Jar(jarfile)
 Constructor for Jar class. _jarfile_ can be a string pathname or a file object
 
-##### Jar.getEntry(_name_)
+##### Jar.getEntry(name)
 Retrieves the jar file entry _name_ as a file object
 
-##### Jar.findEntries(_regex_)
+##### Jar.findEntries(regex)
 Returns a list of entries in the jar file that match the given regular expression
 
 ##### Jar.readManifest()
